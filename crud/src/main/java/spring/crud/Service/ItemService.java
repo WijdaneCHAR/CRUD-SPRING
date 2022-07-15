@@ -27,7 +27,6 @@ public class ItemService {
 
     //Supprimer
     public void deleteAll(){ itemRepositoryApi.deleteAll();}
-    public void deleteItem(Item item){  itemRepositoryApi.delete(item);}
     public void deleteItemById(int id){  itemRepositoryApi.deleteById(id);}
 
     //Trouver
