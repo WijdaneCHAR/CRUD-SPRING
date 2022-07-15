@@ -41,4 +41,9 @@ public class ItemController {
     public void deleteAll() {
         itemService.deleteAll();
     }
+
+    @PostMapping("/update/{id}")
+    public void UpdateItem(@PathVariable("id") int id,@RequestBody String name){
+        itemService.updateItem(id,name);
+    }
 }

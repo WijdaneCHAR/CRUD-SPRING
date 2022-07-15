@@ -33,4 +33,9 @@ public class ItemService {
     public Item findById(int id){ return itemRepositoryApi.findById(id).orElseThrow(() -> new ItemNotFoundException("Article of id " + id + " not found"));}
 
     //Update
+    public void updateItem(int id,String name){
+        Item item = itemRepositoryApi.findById(id).orElseThrow(() -> new ItemNotFoundException("Article of id " + id + " not found"));
+        item.setName(name);
+        itemRepositoryApi.save(item);
+    }
 }
